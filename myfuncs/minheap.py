@@ -1,4 +1,4 @@
-class Heap(object) 
+class Heap(object):
     def __init__(self, stuff=[]):
         self.items = stuff
         self.buildheap()
