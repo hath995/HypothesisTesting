@@ -38,12 +38,12 @@ class LinkedList(object):
         current = self.head
         next = None
         prev = None
-
-        while current.next != None:
-            next = current.next
-            current.next = prev;
-            prev = current;
-            current = next;
-        current.next = prev
-        self.head = current
+        if current:
+            while current.next != None:
+                next = current.next
+                current.next = prev;
+                prev = current;
+                current = next;
+            current.next = prev
+            self.head = current
         return self.head
