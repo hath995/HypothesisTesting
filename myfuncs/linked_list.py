@@ -20,6 +20,7 @@ class LinkedList(object):
         current = self.head
         while current != None:
             yield current.value
+            current = current.next
 
     def add(self, value):
         self.head = LLNode(value, self.head)

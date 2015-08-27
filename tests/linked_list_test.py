@@ -18,11 +18,18 @@ def test_linked_list_add(xs):
         assert newlist.head.value == x
         assert newlist.size() == size
 
+@given(st.lists(st.integers()))
+def test_linked_list_iter(xs):
+    newlist = linked_list.LinkedList(xs)
+    xs.reverse()
+    for a, b in zip(xs, newlist):
+        assert a == b
 
 @given(st.lists(st.integers()))
 def test_linked_list_reverse(xs):
     newlist = linked_list.LinkedList(xs)
     newlist.reverse()
     newlist.reverse()
-    for a,b in zip(reverse(xs), newlist):
+    xs.reverse()
+    for a,b in zip(xs, newlist):
         assert a == b
