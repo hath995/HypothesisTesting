@@ -1,6 +1,9 @@
 class Heap(object):
-    def __init__(self, stuff=[]):
-        self.items = stuff
+    def __init__(self, stuff=None):
+        if stuff is None:
+            self.items = []
+        else:
+            self.items = stuff
         self.buildheap()
 
     def minheapify(self, index):
@@ -35,7 +38,7 @@ class Heap(object):
     def insert(self, num): 
         self.items.append(num)
         current = len(self.items)
-        parent = (current-1)/2
+        parent = (current)/2
         while self.items[current - 1] < self.items[parent - 1]:
             temp = self.items[current - 1]
             self.items[current - 1] = self.items[parent - 1]

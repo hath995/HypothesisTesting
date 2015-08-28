@@ -30,8 +30,8 @@ def test_heap_insert(xs):
         ideal_length += 1
         length = len(newheap.items)
         assert length == ideal_length
-        # for k,v in enumerate(newheap.items):
-        #     left = 2*(k+1)
-        #     right = 2*(k+1)+1
-        #     assert left > length or newheap.items[k] <= newheap.items[left-1]
-        #     assert right > length or newheap.items[k] <= newheap.items[right-1]
+        for k,v in enumerate(newheap.items):
+            left = 2*(k+1)
+            right = 2*(k+1)+1
+            assert left > length or newheap.items[k] <= newheap.items[left-1]
+            assert right > length or newheap.items[k] <= newheap.items[right-1]
