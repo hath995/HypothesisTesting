@@ -38,7 +38,7 @@ class Heap(object):
     def insert(self, num): 
         self.items.append(num)
         current = len(self.items)
-        parent = (current)/2
+        parent = (current-1)/2
         while self.items[current - 1] < self.items[parent - 1]:
             temp = self.items[current - 1]
             self.items[current - 1] = self.items[parent - 1]
