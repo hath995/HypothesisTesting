@@ -1,0 +1,26 @@
+{
+  "name": "samplepy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linked_list.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hath995/HypothesisTesting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hath995/HypothesisTesting/issues"
+  },
+  "homepage": "https://github.com/hath995/HypothesisTesting#readme",
+  "devDependencies": {
+    "jsverify": "^0.7.1",
+    "mocha": "^2.3.0"
+  }
+}

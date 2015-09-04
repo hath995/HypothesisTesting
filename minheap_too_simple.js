@@ -46,13 +46,13 @@ Heap.prototype.top = function() {
 Heap.prototype.insert = function(num) {
   this.items[this.items.length] = num;
   var current = this.items.length;
-  var parent = Math.floor((current-1)/2);
+  var parent = Math.floor((current)/2);
   while(this.items[current - 1] < this.items[parent - 1]) {
     var temp = this.items[current - 1];
     this.items[current - 1] = this.items[parent - 1];
     this.items[parent - 1] = temp;
     current = parent;
-    parent = Math.floor((current-1)/2);
+    parent = Math.floor((current)/2);
   }
 }
 
@@ -74,9 +74,10 @@ Heap.prototype.decreaseKey = function(location, newkey) {
   }
 }
 
-var stuff = new Heap([100,10,11,12,23,1,2,3,4,7,8,92]);
-stuff.insert(-1);
-stuff.insert(-3);
-stuff.insert(-4);
-stuff.insert(-10);
-stuff.decreaseKey(16,-20); 
+module.exports = Heap;
+//var stuff = new Heap([100,10,11,12,23,1,2,3,4,7,8,92]);
+//stuff.insert(-1);
+//stuff.insert(-3);
+//stuff.insert(-4);
+//stuff.insert(-10);
+//stuff.decreaseKey(16,-20); 

@@ -32,6 +32,16 @@ class LinkedList<A> {
         }
   }
 
+  size() {
+    let current = this.head;
+    let size = 0;
+    while(current != null) {
+        current = current.next;
+        size++;
+    }
+    return size;
+  }
+
   //method adds an element to the front of the list
   add(value: A) {
     this.head = new LLNode<A>(value, this.head);
